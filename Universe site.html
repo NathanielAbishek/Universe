@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Universe site</title>
+    <link rel="stylesheet" href="C:\Programming Languages\HTML\Universe site.css">
+    <script src="https://kit.fontawesome.com/1dca313eb4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#Bars').click(function () {
+                $('#Navigation_bar ul').toggle();
+            });
+        });
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #Navigation_bar {
+            background-color: orange;
+            height: max-content;
+            width: 100%;
+            top: 0;
+            position: fixed;
+        }
+
+        label#Logo {
+            color: white;
+            font-size: 50px;
+            font-weight: 700;
+            padding-left: 10px;
+            padding-top: 5px;
+        }
+
+        #Moto {
+            color: white;
+            font-size: 20px;
+            float:none;
+            padding-left: 10px;
+            display: inline-block;
+        }
+
+        #Bars {
+            color: white;
+            font-size: 30px;
+            float: right;
+            padding-top: 25px;
+            display: none;
+        }
+
+        #Navigation_bar ul {
+            list-style: none;
+            transition: all 0.5s linear;
+            float: right;
+            border-right: 5px;
+            margin-bottom: 5px;  
+        }
+
+        #Navigation_bar ul-toggle :checked + #Navigation_bar ul {
+            display: inline-block;
+        }
+
+        #Navigation_bar ul li {
+            background-color: orange;
+            float: left;
+            padding: 0px 0px;
+            border-left: 5px solid white;
+            border-top: 5px solid white;
+            border-bottom: 5px solid white;
+            text-transform: uppercase;
+            border-radius: 0px 0px 0px 0px;
+        }
+
+        #Navigation_bar ul :hover{
+            background-color: #e34a09;
+            border-radius: 0px 0px 0px 0px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 4px 30px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1200px) {
+            label #logo {
+            font-size: 50px;
+            margin-bottom: 5px;
+        }
+            a {
+                font-size: 25px;
+            }
+            #Moto {
+                font-size: 25px;
+            }
+            #Lead_head {
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width: 1085px) {
+            #Navigation_bar ul {
+                display: inline;
+            }
+        }
+
+        @media (max-width: 1085px) {
+            #Bars {
+                display: block;
+                margin-right: 40px;
+            }
+            #Navigation_bar ul {
+                position: fixed;
+                width: min-content;
+                height: max-content;
+                line-height: 90px;
+                display: none;
+                padding: 10px;
+                right: 10px;
+                border: 2px solid black;
+                border-radius: 20px;
+                background-color: rgb(193, 190, 190);
+                transition: 1s;
+            }
+            #Navigation_bar ul li {
+                margin: 0px;
+                padding: 1px;
+            }
+            a {
+                background-color: white;
+                color: orange;
+                width: 240px;
+                text-align: center;
+                font-size: 40px;
+                padding-right: 50px;
+            }
+            a :active {
+                background-color: red;
+            }
+            #Navigation_bar ul :hover {
+                color: white;
+            }
+        }
+
+        #Lead_head {
+            color: rgb(243, 70, 70);
+            text-align: center;
+            font-size: 50px;
+            padding-top: 60px;
+        }
+
+        #Course_fields {
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid black;
+            border-radius: 15px;
+            margin-left: 3%;
+            margin-right: 3%;
+            padding-left: 10%;
+            font-size: 40px;
+            background-image: none;
+        }
+
+        #Course_fields_ask {
+            width: 80%;
+            font-size: 25px;
+            color: black;
+            padding-left: 10%;
+            font-size: 30px;
+            text-align: center
+        }
+
+        #Course_fields_ask :hover {
+            background-color: white;
+        }
+
+        #Course_fields > a {
+            width: 300px;
+            height: 210px;
+            color: white;
+            text-decoration: none;
+            background-color: rgb(100, 100, 100);
+            margin: 30px;
+            text-align: center;
+            align-items: center;
+            padding: 0px;
+            border-radius: 10px;
+            margin-top: 40px;
+            box-shadow: 10px 10px 5px 5px rgb(192, 190, 190);
+        }
+
+        #Course_fields :hover {
+            transform: scale(1.2);
+            color: red;
+            transition: 0.3s;
+        }
+
+        #Engineering {
+            width: 100%;
+            height: 60%;
+            top: 0;
+            border-radius: 10px;
+            background-image: url("Engineering\ image\ edited.jpg");
+        }
+
+        #Engineering > h2 {
+            background-color: white;
+            bottom: 0;
+            color: black;
+            margin-top: 53%;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        #Medicine {
+            width: 100%;
+            height: 60%;
+            top: 0;
+            border-radius: 10px;
+            background-image: url("Medicine\ image\ edited.jpg");
+        }
+
+        #Medicine > h2 {
+            background-color: white;
+            bottom: 0;
+            color: black;
+            margin-top: 53%;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        #Architecture {
+            width: 100%;
+            height: 60%;
+            top: 0;
+            border-radius: 10px;
+            background-image: url("Architecture\ image\ edited.jpeg");
+        }
+
+        #Architecture > h2 {
+            background-color: white;
+            bottom: 0;
+            color: black;
+            margin-top: 53%;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        #Commerce {
+            width: 100%;
+            height: 60%;
+            top: 0;
+            border-radius: 10px;
+            background-image: url("Commerce\ image\ edited.jpeg");
+        }
+
+        #Commerce > h2 {
+            background-color: white;
+            bottom: 0;
+            color: black;
+            margin-top: 53%;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        #Management {
+            width: 100%;
+            height: 60%;
+            top: 0;
+            border-radius: 10px;
+            background-image: url("Management\ image\ edited.jpeg");
+        }
+
+        #Management > h2 {
+            background-color: white;
+            bottom: 0;
+            color: black;
+            margin-top: 53%;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        #Science {
+            width: 100%;
+            height: 60%;
+            top: 0;
+            border-radius: 10px;
+            background-image: url("Science\ test\ 3.jpg");
+        }
+
+        #Science > h2 {
+            background-color: white;
+            bottom: 0;
+            color: black;
+            margin-top: 53%;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        #Motivation_outer {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 40px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        #Motivation_inner {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background-image: url("MacBook\ Pro\ wallpaper 2.jpg");
+            border-radius: 19px;
+        }
+
+        #Motivation_inner :hover {
+            background-color: #e34a09;
+        }
+
+        #Motivation_outer > h2 {
+            text-align: center;
+            color: black;
+            width: 100%;
+            font-size: 40px;
+        }
+
+        #Motivation_inner > a {
+            color: white;
+            background-color:  rgb(242, 184, 78);
+            text-align: center;
+            align-items: center;
+            width: 270px;
+            height: max-content;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-left: auto;
+        }
+
+        #About {
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+
+        #About > h2 {
+            font-size: 30px;
+            padding-left: 10px;
+        }
+
+        #About > p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="Navigation_bar">
+        <label id="Logo">Universe</label>
+        <ul>
+            <li><a href="file:///C:/Programming%20Languages/HTML/Universe%20site.html">Home</a></li>
+            <li><a href="https://nta.ac.in/Abhyas/test">Entrance</a></li>
+            <li><a href="https://docs.google.com">Notes</a></li>
+            <li><a href="C:\Programming Languages\HTML\Motivation.html">Videos</a></li>
+            <li><a href="Maintainance.html">Login</a></li>
+        </ul>
+        <div id="Moto">The university mentor</div>
+        <label id="Bars">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <h1 id="Lead_head">The first in segment education site for university students</h1>
+
+    <div></div>
+    <h2 id="Course_fields_ask">Choose your education domain</h2>
+    
+    <div id="Course_fields">
+        <a id="Engineering" href="C:\Programming Languages\HTML\Engineering.html">
+            <h2>Engineering</h2>
+        </a>
+        <a id="Medicine" href="Maintainance.html">
+            <h2>Medicine</h2>
+        </a>
+        <a id="Architecture" href="Maintainance.html">
+            <h2>Architecture</h2>
+        </a>
+        <a id="Commerce" href="Maintainance.html">
+            <h2>Commerce</h2>
+        </a>
+        <a id="Management" href="Maintainance.html">
+            <h2>Management</h2>
+        </a>
+        <a id="Science" href="Maintainance.html">
+            <h2>Science</h2>
+        </a>
+    </div>
+
+    <div id="Motivation_outer">
+        <h2>Help ?</h2>
+        <div id="Motivation_inner">
+            <a href="C:\Programming Languages\HTML\Motivation.html">
+                <h2>Feeling down ?</h2>
+                <p>We'll motivate you !</p>
+            </a>
+            <a href="C:\Programming Languages\HTML\Feedback.html">
+                <h2>Feedback ?</h2>
+                <p>You'll motivate us !</p>
+            </a>
+            <a href="C:\Programming Languages\HTML\Maintainance.html">
+                <h2>Assistance</h2>
+                <p>24/7 support for your learning</p>
+            </a>
+        </div>
+    </div>
+    <div id="About">
+        <h2>About</h2>
+        <p>
+            Universe is set to provide the best quality learning materials, courses, tutoring and mentorship for college
+            students from various university domains , both for simple learning and clearing eligibility determining
+            entrance
+            tests.
+            Initiated by Nathaniel Abishek, Universe site is under development phase for adding various parts and
+            improvements
+            to the present stage.
+        </p>
+    </div>
+</body>
+</html>
